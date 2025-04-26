@@ -87,27 +87,27 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
       builder: (BuildContext context) {
         return Stack(
           children: [
-            // AlertDialog(
-            //   backgroundColor: Colors.white,
-            //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            //   title: const Text("Game Over"),
-            //   content: Text(
-            //     "$winner wins the game!",
-            //     style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-            //   ),
-            //   actions: [
-            //     OutlinedButton(
-            //       style: ElevatedButton.styleFrom(
-            //         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            //       ),
-            //       onPressed: () {
-            //         Navigator.of(context).pop();
-            //         resetGame();
-            //       },
-            //       child: const Text("Restart"),
-            //     ),
-            //   ],
-            // ),
+            AlertDialog(
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              title: const Text("Game Over"),
+              content: Text(
+                "$winner wins the game!",
+                style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+              ),
+              actions: [
+                OutlinedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    resetGame();
+                  },
+                  child: const Text("Restart"),
+                ),
+              ],
+            ),
             Align(
               alignment: Alignment.center,
               child: ConfettiWidget(
